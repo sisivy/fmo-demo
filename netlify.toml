@@ -2,26 +2,6 @@
   publish = "."
 
 [[redirects]]
-  from = "/leistungen"
-  to = "/leistungen.html"
-  status = 200
-
-[[redirects]]
-  from = "/praxis"
-  to = "/praxis.html"
-  status = 200
-
-[[redirects]]
-  from = "/team"
-  to = "/team.html"
-  status = 200
-
-[[redirects]]
-  from = "/impfungen"
-  to = "/impfungen.html"
-  status = 200
-
-[[redirects]]
-  from = "/kontakt"
-  to = "/kontakt.html"
+  from = "/*"
+  to = "/index.html"
   status = 200

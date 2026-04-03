@@ -1,21 +1,18 @@
-# Familienmedizin Oberneuland – multipage static site
+# Familienmedizin Oberneuland – static Netlify demo
 
-This package is a Netlify-ready static site.
+This is a build-free static site package.
 
 ## Deploy on Netlify
-- unzip the archive
-- upload the extracted folder to Netlify Drop, or connect the folder/repo in Netlify
-- publish directory is the project root (`.`)
+
+- Drag and drop the folder contents into Netlify
+- or connect the folder/repo directly
+- no npm install required
+- no build step required
 
 ## Project structure
-- `index.html` – start page
-- `leistungen.html` – services page
-- `praxis.html` – practice and philosophy
-- `team.html` – doctors and team
-- `impfungen.html` – vaccinations
-- `kontakt.html` – contact, hours, imprint
-- `assets/css/styles.css` – global styling
-- `assets/js/data.js` – shared content
-- `assets/js/components.js` – reusable rendering helpers
-- `assets/js/shell.js` – shared navigation, footer, page transitions, mobile menu
-- `assets/js/*.js` – page-specific scripts
+
+- `index.html` – page shell
+- `assets/css/styles.css` – styling
+- `assets/js/data.js` – content
+- `assets/js/components.js` – reusable render helpers
+- `assets/js/app.js` – page rendering and menu behavior
