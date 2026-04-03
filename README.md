@@ -1,29 +1,33 @@
-# Familienmedizin Oberneuland – Netlify demo
+# Familienmedizin Oberneuland – Netlify-ready static demo
 
-This package contains the current React redesign as a Vite app ready for Netlify.
+This package is a build-free static website version of the final redesign.
 
-## Run locally
+## Why this package
 
-```bash
-npm install
-npm run dev
-```
+The previous Vite-based package ran into a local macOS/esbuild compatibility issue.
+This version avoids any local build step.
 
-## Build
+## Deploy on Netlify
 
-```bash
-npm run build
-```
+### Option 1: Drag and drop
+1. Unzip this package
+2. Log in to Netlify
+3. Go to **Sites**
+4. Drag the unzipped folder contents into Netlify deploy
 
-## Deploy to Netlify
+### Option 2: Git-based deploy
+1. Push the files to GitHub
+2. Create a new Netlify site from that repo
+3. No build command is needed
+4. Publish directory: `.`
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-
-These settings are already included in `netlify.toml`.
+## Files
+- `index.html`
+- `styles.css`
+- `script.js`
+- `netlify.toml`
 
 ## Notes
-
-- Vite is used as the frontend build tool. Vite documents `npm create vite@latest` for scaffolding and `vite build` for production builds. citeturn788567view1turn415666search15
-- Tailwind CSS is integrated using the official Vite plugin approach with `@tailwindcss/vite` and `@import "tailwindcss"`. citeturn788567view0
-- Netlify deploys the output from the publish directory, and `dist` is the correct publish directory for this Vite static build. citeturn788567view2
+- The website includes placeholders for room photos and team photos.
+- The content is based on the updated final practice content provided by the user.
+- This package is intended as a client demo and presentation-ready preview.
