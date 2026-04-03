@@ -10,526 +10,294 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="#top" class="brand">
-          <div class="brand-mark">❤</div>
-          <div>
-            <div class="brand-title">Familienmedizin Oberneuland</div>
-            <div class="brand-subtitle">Praxis Kuboschek · Kensy</div>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+
+    <header class="site-header" id="top">
+      <div class="utility-bar">
+        <div class="container utility-bar__inner">
+          <p>Praxis Kuboschek · Kensy · Bremen-Oberneuland</p>
+          <div class="utility-bar__links">
+            <a href="tel:+49421253949">0421 25 39 49</a>
+            <a href="#kontakt">Kontakt</a>
           </div>
+        </div>
+      </div>
+
+      <div class="container header-main">
+        <a class="brand" href="#top" aria-label="Familienmedizin Oberneuland Startseite">
+          <span class="brand__mark">FM</span>
+          <span class="brand__text">
+            <strong>Familienmedizin Oberneuland</strong>
+            <small>Hausärztliche Gemeinschaftspraxis</small>
+          </span>
         </a>
 
-        <button class="menu-toggle" aria-label="Navigation öffnen" aria-expanded="false">☰</button>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
 
-        <nav class="nav" id="nav">
+        <nav class="desktop-nav" aria-label="Hauptnavigation">
+          <a href="#start">Start</a>
           <a href="#sprechzeiten">Praxiszeiten</a>
           <a href="#leistungen">Leistungen</a>
           <a href="#praxis">Praxis</a>
           <a href="#team">Team</a>
+          <a href="#impfungen">Impfungen</a>
           <a href="#kontakt">Kontakt</a>
-          <a class="btn btn-dark nav-cta" href="tel:+49421253949">Anrufen</a>
+          <a class="button button--primary button--small" href="tel:+49421253949">Anrufen</a>
         </nav>
       </div>
+
+      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile Navigation" hidden>
+        <div class="container mobile-nav__inner">
+          <a href="#start">Start</a>
+          <a href="#sprechzeiten">Praxiszeiten</a>
+          <a href="#leistungen">Leistungen</a>
+          <a href="#praxis">Praxis</a>
+          <a href="#team">Team</a>
+          <a href="#impfungen">Impfungen</a>
+          <a href="#mfa">MFA gesucht</a>
+          <a href="#kontakt">Kontakt</a>
+          <a class="button button--primary" href="tel:+49421253949">Jetzt anrufen</a>
+        </div>
+      </nav>
     </header>
 
-    <main id="top">
-      <section class="hero section">
-        <div class="hero-bg"></div>
-        <div class="container hero-grid">
-          <div>
-            <div class="hero-pill">Hausärztliche Gemeinschaftspraxis in Bremen-Oberneuland</div>
-            <h1>
-              Familienmedizin mit persönlicher Begleitung, moderner Diagnostik und naturheilkundlicher
-              Kompetenz.
-            </h1>
-            <p class="hero-text">
-              Seit fast drei Jahrzehnten begleiten wir Menschen in allen Lebensphasen – von Kindern und
-              Jugendlichen bis ins hohe Alter. Unsere Praxis verbindet hausärztliche Versorgung,
-              Innere Medizin, Naturheilkunde, Akupunktur und Chirotherapie in einem ganzheitlichen Ansatz.
+    <main id="main-content">
+      <section class="hero section" id="start">
+        <div class="container hero__grid">
+          <div class="hero__copy">
+            <p class="eyebrow">Familienmedizin in Bremen-Oberneuland</p>
+            <h1>Persönliche hausärztliche Begleitung mit moderner Diagnostik und naturheilkundlicher Kompetenz.</h1>
+            <p class="lead">
+              Unsere Praxis begleitet Menschen seit vielen Jahren in unterschiedlichen Lebensphasen – mit Allgemeinmedizin,
+              Innerer Medizin, Naturheilkunde, Akupunktur und Chirotherapie in einem ganzheitlichen Ansatz.
             </p>
-
-            <div class="tag-list">
-              <span class="tag">Hausärztliche Gemeinschaftspraxis für Allgemeinmedizin und Innere Medizin</span>
-              <span class="tag">Naturheilkunde, Akupunktur und Chirotherapie unter einem Dach</span>
-              <span class="tag">Klare Orientierung zu Akutsprechstunde, Infektregeln und Erreichbarkeit</span>
-            </div>
-
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#kontakt">Kontakt &amp; Anfahrt</a>
-              <a class="btn btn-secondary" href="#sprechzeiten">Praxiszeiten ansehen</a>
+            <div class="pill-row" id="hero-pills"></div>
+            <div class="button-row">
+              <a class="button button--primary" href="#kontakt">Kontakt &amp; Anfahrt</a>
+              <a class="button button--secondary" href="#sprechzeiten">Praxiszeiten ansehen</a>
             </div>
           </div>
 
-          <aside class="card glass-card">
-            <div class="card-head">
-              <div>
-                <div class="eyebrow">Aktuelle Hinweise</div>
-                <h2>Schnell finden, was zählt</h2>
-              </div>
-              <div class="icon-badge">🗓</div>
+          <aside class="hero-panel card">
+            <div class="card__header">
+              <p class="eyebrow">Wichtige Hinweise</p>
+              <h2>Auf einen Blick</h2>
             </div>
-
-            <div class="fact-list">
-              <div class="fact-item">
-                <div class="fact-icon">🕒</div>
-                <div>
-                  <strong>Telefonsprechstunde</strong>
-                  <p>Dienstag bis Freitag jeweils 12:00–12:20 Uhr. Bei sehr hohem Arbeitsaufkommen kann sie ausnahmsweise entfallen.</p>
-                </div>
-              </div>
-              <div class="fact-item">
-                <div class="fact-icon">⚕</div>
-                <div>
-                  <strong>Akute Beschwerden ohne Termin</strong>
-                  <p>Vormittags bis spätestens 10:30 Uhr, nachmittags bis spätestens 17:00 Uhr, freitags nachmittags nur von 14:00–14:30 Uhr.</p>
-                </div>
-              </div>
-              <div class="fact-item">
-                <div class="fact-icon">🛡</div>
-                <div>
-                  <strong>Infektregelung</strong>
-                  <p>Bei Atemwegs- oder Magen-Darm-Infekten gilt weiterhin FFP2-Maskenpflicht. Patienten mit akutem COVID-Infekt betreten die Praxis bitte nicht, sondern melden sich telefonisch.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="alert-box">
-              <div class="eyebrow warning">Wichtiger Hinweis</div>
-              <p>
-                Impf-Anfragen per E-Mail können nicht berücksichtigt werden. Bitte wenden Sie sich telefonisch oder persönlich an das Praxisteam.
-              </p>
+            <div class="stack" id="quick-facts"></div>
+            <div class="notice notice--warm">
+              <strong>Hinweis:</strong> Impf-Anfragen, Terminanfragen, Rezeptwünsche und medizinische Beratungen werden per E-Mail nicht bearbeitet.
             </div>
           </aside>
         </div>
       </section>
 
-      <section class="section section-tight">
-        <div class="container grid-4">
-          <article class="card">
-            <div class="eyebrow">Hinweis 01</div>
-            <h3>Beratungsanlass</h3>
-            <p>
-              Aufgrund des hohen Patientenaufkommens wird Akutpatientinnen und Akutpatienten ohne Termin derzeit ein Beratungsanlass gewährt. Bei Terminen sind maximal zwei Beratungsanlässe vorgesehen.
-            </p>
-          </article>
-          <article class="card">
-            <div class="eyebrow">Hinweis 02</div>
-            <h3>E-Rezept</h3>
-            <p>
-              Das E-Rezept ist in der Praxis eingeführt. Es kann über die elektronische Gesundheitskarte, App oder QR-Code eingelöst werden.
-            </p>
-          </article>
-          <article class="card">
-            <div class="eyebrow">Hinweis 03</div>
-            <h3>Arbeitsunfähigkeitsbescheinigung</h3>
-            <p>
-              Die AU wird elektronisch an die Krankenkasse übermittelt. Arbeitgeber rufen die AU bei der Krankenkasse ab. Telefonische Krankschreibung ist bei Atemwegs- oder Magen-Darm-Infekten weiterhin möglich.
-            </p>
-          </article>
-          <article class="card">
-            <div class="eyebrow">Hinweis 04</div>
-            <h3>Respekt im Praxisalltag</h3>
-            <p>
-              Die Praxis bittet alle Patientinnen und Patienten, den Medizinischen Fachangestellten jederzeit mit Höflichkeit und Respekt zu begegnen.
-            </p>
-          </article>
-        </div>
+      <section class="section section--compact">
+        <div class="container quick-access-grid" id="shortcut-cards"></div>
       </section>
 
-      <section id="sprechzeiten" class="section">
+      <section class="section" id="sprechzeiten">
         <div class="container">
-          <div class="section-title">
-            <div class="eyebrow">Praxiszeiten</div>
-            <h2>Öffnungszeiten und ärztliche Sprechzeiten übersichtlich dargestellt</h2>
+          <div class="section-heading">
+            <p class="eyebrow">Praxiszeiten</p>
+            <h2>Öffnungszeiten, Telefonsprechstunde und Annahmeschlusszeiten klar strukturiert</h2>
             <p>
-              Damit Patientinnen und Patienten sofort erkennen können, wann die Praxis erreichbar ist und bis wann Akutfälle ohne Termin angenommen werden.
+              Damit wichtige Informationen auch ohne langes Scrollen oder Suchen sofort erreichbar sind, stehen die zentralen
+              Praxiszeiten direkt hier im oberen Seitenbereich.
             </p>
           </div>
 
-          <div class="grid-2-3 mt-lg">
-            <article class="card dark-card">
-              <div class="eyebrow light">Praxis für Allgemeinmedizin</div>
-              <div class="stack-md text-light">
-                <p><strong>Montag bis Freitag:</strong> 08:00–12:00 Uhr</p>
-                <p><strong>Telefonsprechstunde:</strong> Dienstag bis Freitag 12:00–12:20 Uhr</p>
-                <p><strong>Akut ohne Termin:</strong> vormittags bis 10:30 Uhr, nachmittags bis 17:00 Uhr, freitags nachmittags 14:00–14:30 Uhr</p>
-                <p>Notfälle und Patientinnen und Patienten mit Termin werden vorrangig behandelt. Bei hohem Andrang kann es zu verlängerten Wartezeiten kommen.</p>
-              </div>
-            </article>
-
-            <div class="grid-2">
-              <article class="card">
-                <div class="eyebrow">Ärztliche Sprechzeit</div>
-                <h3>Dr. med. Gerald Kuboschek</h3>
-                <p class="muted">Facharzt für Allgemeinmedizin und Innere Medizin (hausärztliche Versorgung)</p>
-                <p><strong>Praxisgründer seit dem 01.01.1998 · 34. Berufsjahr</strong></p>
-                <ul class="check-list mt-md">
-                  <li>Montag bis Freitag: 08:00–12:00 Uhr (Annahmeschluss 10:30 Uhr)</li>
-                  <li>Montag, Dienstag und Donnerstag: 15:00–18:00 Uhr (Annahmeschluss 17:00 Uhr)</li>
-                  <li>Freitag: 15:00–16:00 Uhr (Annahmeschluss 15:30 Uhr)</li>
-                  <li>Zusätzliche Termine nach Vereinbarung</li>
-                </ul>
-                <div class="chip-list mt-md">
-                  <span class="chip">Chirotherapie</span>
-                  <span class="chip">Akupunktur (A-/B-Diplom)</span>
-                  <span class="chip">Naturheilverfahren</span>
-                  <span class="chip">Psychosomatische Grundversorgung</span>
-                </div>
-              </article>
-
-              <article class="card">
-                <div class="eyebrow">Ärztliche Sprechzeit</div>
-                <h3>Dr. med. Kirsten Kensy</h3>
-                <p class="muted">Fachärztin für Allgemeinmedizin und Chirurgie</p>
-                <p><strong>Praxismitinhaberin seit dem 01.01.2009 · 34. Berufsjahr</strong></p>
-                <ul class="check-list mt-md">
-                  <li>Montag bis Freitag: 08:00–12:00 Uhr (Annahmeschluss 10:30 Uhr)</li>
-                  <li>Donnerstag: 15:00–18:00 Uhr (Annahmeschluss 17:00 Uhr)</li>
-                  <li>Zusätzliche Termine nach Vereinbarung</li>
-                </ul>
-                <div class="chip-list mt-md">
-                  <span class="chip">Naturheilverfahren</span>
-                  <span class="chip">Akupunktur (A-Diplom)</span>
-                  <span class="chip">Psychosomatische Grundversorgung</span>
-                  <span class="chip">Kleine Chirurgie / Wundversorgung</span>
-                </div>
-              </article>
+          <div class="hours-layout">
+            <div class="card card--dark">
+              <p class="eyebrow eyebrow--light">Praxisorganisation</p>
+              <h3>Allgemeine Hinweise zum Ablauf</h3>
+              <ul class="check-list check-list--light" id="practice-overview"></ul>
             </div>
+            <div class="grid-2" id="doctors-grid"></div>
           </div>
         </div>
       </section>
 
-      <section id="leistungen" class="section section-dark">
+      <section class="section section--subtle">
         <div class="container">
-          <div class="section-title light-section-title">
-            <div class="eyebrow light">Leistungen Allgemeinmedizin</div>
+          <div class="section-heading">
+            <p class="eyebrow">Praxisabläufe</p>
+            <h2>Organisatorische Hinweise für einen reibungslosen Ablauf</h2>
+          </div>
+          <div class="grid-4" id="flow-grid"></div>
+        </div>
+      </section>
+
+      <section class="section section--dark" id="leistungen">
+        <div class="container">
+          <div class="section-heading section-heading--light">
+            <p class="eyebrow eyebrow--light">Leistungen Allgemeinmedizin</p>
             <h2>Hausärztliche Versorgung, Diagnostik, Prävention und naturheilkundliche Ergänzungen</h2>
             <p>
-              Die Praxis vereint klassische hausärztliche Leistungen mit moderner Diagnostik, Vorsorgeangeboten und ausgewählten Selbstzahlerleistungen.
+              Die Praxis vereint klassische Kassenleistungen, moderne Diagnostik, Vorsorgeangebote, Impfberatung,
+              Selbstzahlerleistungen und eine naturheilkundliche Privatsprechstunde.
             </p>
           </div>
-
-          <div class="grid-4 mt-lg">
-            <article class="card service-card">
-              <div class="service-icon">🛡</div>
-              <h3>Vorsorge &amp; Prävention</h3>
-              <ul class="check-list light-checks">
-                <li>Teilnahme an der hausärztlich zentrierten Versorgung (HZV)</li>
-                <li>Check-up und Hautkrebsscreening nach den geltenden Fristen</li>
-                <li>Krebsvorsorge für Männer ab dem 45. Lebensjahr</li>
-                <li>Jugendarbeitsschutzuntersuchung</li>
-                <li>Impfungen und Reiseimpfberatung</li>
-                <li>Elektronische Patientenakte (ePA) inklusive Unterstützung beim Befüllen der App</li>
-              </ul>
-            </article>
-            <article class="card service-card">
-              <div class="service-icon">⚕</div>
-              <h3>Diagnostik &amp; hausärztliche Versorgung</h3>
-              <ul class="check-list light-checks">
-                <li>Laboruntersuchungen: Blut, Urin, Stuhl, Wund- und Schleimhautabstriche</li>
-                <li>Schnelltests wie CRP, Troponin T, D-Dimere und Strep-A</li>
-                <li>EKG, Belastungs-EKG, Langzeitblutdruckmessung und Lungenfunktion</li>
-                <li>DMP für Diabetes mellitus, KHK, Asthma bronchiale und COPD</li>
-                <li>Präoperative Diagnostik, postoperative Nachbehandlung und Wundversorgung</li>
-                <li>Sonographie der Bauchorgane, des Beckens und der Schilddrüse</li>
-                <li>Schellong-Test, Sehtestung sowie Kur- und Rentenanträge</li>
-                <li>Notfalldaten-Management auf der Versichertenkarte</li>
-              </ul>
-            </article>
-            <article class="card service-card">
-              <div class="service-icon">🌿</div>
-              <h3>Naturheilkunde &amp; Grüne Sprechstunde</h3>
-              <ul class="check-list light-checks">
-                <li>Akupunktur</li>
-                <li>Naturheilkundliche Beratung bei akuten und chronischen Beschwerden</li>
-                <li>Raucherentwöhnung</li>
-                <li>Begleitung bei Burn-out, Erschöpfungszuständen und Stresssituationen</li>
-                <li>Ernährungsberatung und Gewichtsreduktion</li>
-                <li>Schröpfen und Schröpfmassage</li>
-                <li>Sauerstoffmehrschritt-Therapie, Eigenbluttherapie und Aufbautherapien</li>
-                <li>Lichttherapie sowie probiotische Darmbehandlung im naturheilkundlichen Kontext</li>
-              </ul>
-            </article>
-            <article class="card service-card">
-              <div class="service-icon">✓</div>
-              <h3>Selbstzahler- &amp; Tauglichkeitsleistungen</h3>
-              <ul class="check-list light-checks">
-                <li>Masern-Antikörperbestimmung mit Attestierung</li>
-                <li>Check-up-Untersuchungen außerhalb gesetzlicher Fristen</li>
-                <li>Sporttauglichkeits-Untersuchungen</li>
-                <li>Sportboot-, Führerschein-, LKW- und Reisebus-Untersuchungen</li>
-                <li>Tauchtauglichkeits- und Fallschirmsprung-Untersuchungen</li>
-                <li>Berufs- und Arbeits-Tauglichkeitsuntersuchungen vor Einstellung</li>
-                <li>Entfernen von Hautanhangsgebilden und Vereisen von Warzen</li>
-                <li>Stuhluntersuchung auf Darmkrebs (M2PK)</li>
-              </ul>
-            </article>
-          </div>
+          <div class="grid-4" id="services-grid"></div>
         </div>
       </section>
 
-      <section id="praxis" class="section">
-        <div class="container grid-2-3 practice-grid">
-          <article class="card">
-            <div class="section-title left-title">
-              <div class="eyebrow">Die Grüne Sprechstunde</div>
+      <section class="section" id="praxis">
+        <div class="container two-column-layout">
+          <div class="card card--padded">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">Die Grüne Sprechstunde</p>
               <h2>Ganzheitliche Begleitung auf Basis fundierter Schulmedizin</h2>
-              <p>
-                In der Grünen Sprechstunde werden naturheilkundliche und andere komplementäre Therapieinhalte in ein medizinisch fundiertes Gesamtkonzept integriert. Ziel ist es, Selbstheilungskräfte zu aktivieren und körperliches wie seelisches Gleichgewicht zu stärken.
-              </p>
             </div>
-            <p class="muted-text">
-              Schwerpunkte sind unter anderem die Begleitung bei Erschöpfung, Burn-out, Stresssituationen, Infektanfälligkeit, Haarausfall sowie Übergewicht oder Adipositas. Auch die medizinische Begleitung bei vegetarischer oder veganer Ernährung gehört zum Angebot.
-            </p>
-            <p class="muted-text">
-              Zu den eingesetzten oder empfohlenen Therapieinhalten zählen Ernährungstherapie, Bewegungstherapie, Phytotherapie, Ordnungstherapie, Balneotherapie, Entspannungstechniken, Akupunktur, Sauerstofftherapie, Eigenbluttherapie, Aufbautherapie, Homöopathie, Lichttherapie und Schröpfen.
-            </p>
-            <div class="grid-2 mt-md">
-              <div class="mini-card">Ernährungstherapie</div>
-              <div class="mini-card">Bewegungstherapie</div>
-              <div class="mini-card">Phytotherapie</div>
-              <div class="mini-card">Ordnungstherapie</div>
-              <div class="mini-card">Balneotherapie</div>
-              <div class="mini-card">Entspannungstechniken</div>
-              <div class="mini-card">Akupunktur</div>
-              <div class="mini-card">Lichttherapie &amp; Schröpfen</div>
+            <div class="rich-text" id="green-consultation-text"></div>
+            <div class="tag-grid" id="green-tags"></div>
+            <div class="notice notice--warm">
+              Die Grüne Sprechstunde ist eine Privatsprechstunde. Selbstzahlerleistungen werden nach GOÄ abgerechnet.
             </div>
-            <div class="alert-box mt-md">
-              <p>Die Grüne Sprechstunde ist eine Privatsprechstunde. Selbstzahlerleistungen werden nach der Gebührenordnung für Ärzte (GOÄ) abgerechnet.</p>
-            </div>
-          </article>
+          </div>
 
-          <div class="stack-lg">
-            <article class="card">
-              <div class="section-title left-title">
-                <div class="eyebrow">Unsere Praxis</div>
+          <div class="stack stack--large">
+            <div class="card card--padded">
+              <div class="section-heading section-heading--tight">
+                <p class="eyebrow">Unsere Praxis</p>
                 <h2>27 Jahre Erfahrung, moderne Ausstattung und gelebtes Qualitätsmanagement</h2>
-                <p>
-                  Die Praxis ist seit vielen Jahren als hausärztliche Gemeinschaftspraxis für Allgemeinmedizin, Naturheilkunde, Akupunktur und Chirotherapie etabliert.
-                </p>
               </div>
-              <div class="stack-md muted-text">
-                <p>Neben Dr. Kirsten Kensy und Dr. Gerald Kuboschek arbeitet ein erfahrenes Team aus Medizinischen Fachangestellten und Auszubildenden in einer modern ausgestatteten Praxis. Laboruntersuchungen, Urin- und Stuhluntersuchungen sowie Schnelltests finden täglich statt.</p>
-                <p>Die Praxis wurde nach dem QEP-Modell bereits mehrfach erfolgreich zertifiziert und erzielte zuletzt 100 von 100 möglichen Punkten. Auch wenn das bundesweite Zertifizierungsmodell inzwischen eingestellt wurde, wird das interne Qualitätsmanagement konsequent weitergeführt.</p>
-                <p>Das Leitbild der Praxis ist familiäre, generationsübergreifende Begleitung: Menschen in ihren verschiedenen Lebensphasen medizinisch zu begleiten und gesundheitliche wie persönliche Entwicklungen mit Blick auf das Ganze zu verstehen.</p>
-              </div>
-            </article>
+              <div class="rich-text" id="practice-text"></div>
+            </div>
 
-            <article class="card soft-card">
-              <div class="card-head">
-                <div>
-                  <div class="eyebrow">Praxisräume</div>
-                  <h3>Platzhalter für Fotos der Räumlichkeiten</h3>
-                </div>
-                <div class="icon-badge soft-icon">🖼</div>
+            <div class="card card--padded">
+              <div class="section-heading section-heading--tight">
+                <p class="eyebrow">Praxisräume</p>
+                <h2>Platzhalter für Fotos der Räumlichkeiten</h2>
+                <p>Hier können später echte Aufnahmen der Praxisräume eingebunden werden.</p>
               </div>
-              <div class="grid-2 mt-md">
-                <div class="photo-placeholder"><span>Platzhalter für Foto</span><small>Empfang und Anmeldung</small></div>
-                <div class="photo-placeholder"><span>Platzhalter für Foto</span><small>Wartebereich</small></div>
-                <div class="photo-placeholder"><span>Platzhalter für Foto</span><small>Sprechzimmer</small></div>
-                <div class="photo-placeholder"><span>Platzhalter für Foto</span><small>Labor und Diagnostik</small></div>
-              </div>
-            </article>
+              <div class="grid-2" id="rooms-grid"></div>
+            </div>
           </div>
         </div>
       </section>
 
-      <section class="section section-soft">
-        <div class="container">
-          <div class="section-title">
-            <div class="eyebrow">Impfungen</div>
-            <h2>Wichtige Impfangebote und Impfberatung in der Praxis</h2>
-            <p>Bitte bringen Sie zu jedem Arztbesuch Ihren Impfpass mit, damit empfohlen werden kann, ob eine Grundimmunisierung oder Auffrischungsimpfung sinnvoll ist.</p>
+      <section class="section section--subtle" id="impfungen">
+        <div class="container two-column-layout">
+          <div class="card card--padded">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">Impfungen</p>
+              <h2>Impfangebote und Reiseimpfberatung in der Praxis</h2>
+            </div>
+            <div class="rich-text" id="vaccination-intro"></div>
+            <ul class="check-list" id="vaccinations-list"></ul>
           </div>
-          <div class="grid-2-3 mt-lg">
-            <article class="card">
-              <div class="eyebrow">Impfangebote</div>
-              <ul class="check-list">
-                <li>COVID-19-Auffrischungsimpfungen nach aktueller Indikation</li>
-                <li>Impfung gegen Herpes Zoster (Gürtelrose)</li>
-                <li>Pneumokokken-Impfung für ältere oder gefährdete Personen</li>
-                <li>Masern-Auffrischung bzw. Immunitätsnachweis</li>
-                <li>Tetanus, Diphtherie, Polio und Pertussis alle 10 Jahre</li>
-                <li>FSME-Impfung bei Aufenthalt in Risikogebieten</li>
-                <li>Reiseimpfberatung und reisezielspezifische Impfungen</li>
-              </ul>
-            </article>
-            <article class="card">
-              <div class="eyebrow">Hinweise zur Impfberatung</div>
-              <div class="stack-md muted-text">
-                <p>Auffrischungsimpfungen gegen COVID, die Gürtelrose-Impfung, Pneumokokken-, Masern- sowie Standardauffrischungen gehören zu den regelmäßig nachgefragten Themen in der Praxis.</p>
-                <p>Reiseimpfungen sind individuell zu planen. Vereinbaren Sie dafür bitte frühzeitig einen Termin zur Reiseimpfberatung.</p>
-                <p>Impf-Anfragen per E-Mail können nicht berücksichtigt werden. Bitte melden Sie sich telefonisch oder persönlich an der Anmeldung.</p>
-                <p>Weitere allgemeine Impfempfehlungen können bei Bedarf gemeinsam mit dem Praxisteam anhand der Empfehlungen der STIKO besprochen werden.</p>
-              </div>
-            </article>
+          <div class="card card--padded">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">Weitere Hinweise</p>
+              <h2>Wichtig für die Impfberatung</h2>
+            </div>
+            <div class="rich-text" id="vaccination-notes"></div>
           </div>
         </div>
       </section>
 
-      <section id="team" class="section">
+      <section class="section" id="team">
         <div class="container">
-          <div class="section-title">
-            <div class="eyebrow">Team</div>
+          <div class="section-heading">
+            <p class="eyebrow">Team</p>
             <h2>Ein erfahrenes Team mit Fachkompetenz, Freundlichkeit und Freude an der Arbeit</h2>
-            <p>Die gute Atmosphäre in der Praxis entsteht durch ein eingespieltes Team, das auch bei hohem Patientenaufkommen lösungsorientiert und menschlich zusammenarbeitet.</p>
+            <p>
+              Die gute Atmosphäre in der Praxis beruht auf einem eingespielten Team aus ärztlicher Leitung,
+              Medizinischen Fachangestellten und Ausbildung.
+            </p>
           </div>
 
-          <div class="grid-2 mt-lg">
-            <article class="card profile-card">
-              <div class="profile-grid">
-                <div class="photo-placeholder photo-large"><span>Platzhalter für Foto</span><small>Teamfoto Dr. med. Kirsten Kensy</small></div>
-                <div>
-                  <div class="eyebrow">Ärztliche Leitung</div>
-                  <h3>Dr. med. Kirsten Kensy</h3>
-                  <p class="muted">Fachärztin für Allgemeinmedizin und Chirurgie</p>
-                  <p><strong>Praxismitinhaberin seit dem 01.01.2009 · 34. Berufsjahr</strong></p>
-                  <div class="chip-list mt-md">
-                    <span class="chip">Naturheilverfahren</span>
-                    <span class="chip">Akupunktur (A-Diplom)</span>
-                    <span class="chip">Psychosomatische Grundversorgung</span>
-                  </div>
-                </div>
-              </div>
-            </article>
-            <article class="card profile-card">
-              <div class="profile-grid">
-                <div class="photo-placeholder photo-large"><span>Platzhalter für Foto</span><small>Teamfoto Dr. med. Gerald Kuboschek</small></div>
-                <div>
-                  <div class="eyebrow">Ärztliche Leitung</div>
-                  <h3>Dr. med. Gerald Kuboschek</h3>
-                  <p class="muted">Facharzt für Allgemeinmedizin und Innere Medizin</p>
-                  <p><strong>Praxisgründer seit dem 01.01.1998 · 34. Berufsjahr</strong></p>
-                  <div class="chip-list mt-md">
-                    <span class="chip">Chirotherapie</span>
-                    <span class="chip">Akupunktur (A-/B-Diplom)</span>
-                    <span class="chip">Naturheilverfahren</span>
-                    <span class="chip">Psychosomatische Grundversorgung</span>
-                  </div>
-                </div>
-              </div>
-            </article>
+          <div class="grid-2" id="doctor-team-grid"></div>
+          <div class="card card--padded team-section-card">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">Praxis-Team</p>
+              <h2>Platzhalter für Teamfotos inklusive</h2>
+            </div>
+            <div class="grid-3" id="team-grid"></div>
           </div>
-
-          <article class="card mt-md">
-            <div class="card-head">
-              <div>
-                <div class="eyebrow">Medizinische Fachangestellte &amp; Ausbildung</div>
-                <h3>Platzhalter für Teamfotos integriert</h3>
-              </div>
-              <div class="icon-badge">👥</div>
-            </div>
-
-            <div class="team-grid mt-md">
-              <div class="team-card"><div class="photo-placeholder photo-small"><span>Platzhalter für Foto</span><small>Foto Maren Bundels</small></div><div><strong>Maren Bundels</strong><p>Leitende Medizinische Fachangestellte</p><small>seit 01.01.2009</small></div></div>
-              <div class="team-card"><div class="photo-placeholder photo-small"><span>Platzhalter für Foto</span><small>Foto Aysel Altay</small></div><div><strong>Aysel Altay</strong><p>Leitende Medizinische Fachangestellte</p><small>seit 01.09.2017</small></div></div>
-              <div class="team-card"><div class="photo-placeholder photo-small"><span>Platzhalter für Foto</span><small>Foto Klaudia Thiericke</small></div><div><strong>Klaudia Thiericke</strong><p>Medizinische Fachangestellte</p><small>seit 01.01.2016</small></div></div>
-              <div class="team-card"><div class="photo-placeholder photo-small"><span>Platzhalter für Foto</span><small>Foto Monika Lütje</small></div><div><strong>Monika Lütje</strong><p>Medizinische Fachangestellte</p><small>seit 01.06.2022</small></div></div>
-              <div class="team-card"><div class="photo-placeholder photo-small"><span>Platzhalter für Foto</span><small>Foto Iris Birkhan</small></div><div><strong>Iris Birkhan</strong><p>Medizinische Fachangestellte</p><small>seit 01.08.2024</small></div></div>
-              <div class="team-card"><div class="photo-placeholder photo-small"><span>Platzhalter für Foto</span><small>Foto Vanessa Rebbin</small></div><div><strong>Vanessa Rebbin</strong><p>Medizinische Fachangestellte</p><small>seit 01.03.2020</small></div></div>
-              <div class="team-card"><div class="photo-placeholder photo-small"><span>Platzhalter für Foto</span><small>Foto Saghar Akhoundzadeh</small></div><div><strong>Saghar Akhoundzadeh</strong><p>Auszubildende zur Medizinischen Fachangestellten (2. Ausbildungsjahr)</p><small>seit 01.08.2024</small></div></div>
-            </div>
-          </article>
         </div>
       </section>
 
-      <section class="section">
-        <div class="container grid-2-3">
-          <article class="card">
-            <div class="section-title left-title">
-              <div class="eyebrow">Häufige Fragen</div>
+      <section class="section section--subtle">
+        <div class="container two-column-layout">
+          <div class="card card--padded">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">Häufige Fragen</p>
               <h2>Wichtige Hinweise verständlich und direkt auffindbar</h2>
-              <p>Viele organisatorische Fragen lassen sich bereits vor dem Anruf in der Praxis schnell klären.</p>
             </div>
-            <div class="faq-list">
-              <details open>
-                <summary>Kann ich per E-Mail einen Termin oder Impf-Anfragen senden?</summary>
-                <p>Nein. Terminanfragen, Rezeptwünsche, medizinische Beratungen und Impf-Anfragen werden per E-Mail nicht bearbeitet. Bitte rufen Sie die Praxis direkt an.</p>
-              </details>
-              <details>
-                <summary>Was gilt bei Infektsymptomen?</summary>
-                <p>Bei Husten, Schnupfen, Halsschmerzen, Fieber oder Magen-Darm-Beschwerden gilt weiterhin FFP2-Maskenpflicht. Bei akutem COVID-Infekt betreten Sie die Praxis bitte nicht und melden sich telefonisch.</p>
-              </details>
-              <details>
-                <summary>Wie läuft die Akutsprechstunde ohne Termin ab?</summary>
-                <p>Akutpatientinnen und Akutpatienten ohne Termin werden bis zu den ausgewiesenen Annahmeschlusszeiten angenommen. Notfälle und Patientinnen und Patienten mit Termin werden vorrangig behandelt.</p>
-              </details>
-              <details>
-                <summary>Wie funktioniert die elektronische Patientenakte (ePA)?</summary>
-                <p>Die Krankenkassen stellen dafür eine App bereit. Auf Wunsch kann die Praxis medizinische Informationen in Ihre App übertragen. Bei Fragen unterstützt Sie das Praxisteam gern.</p>
-              </details>
-            </div>
-          </article>
+            <div class="faq-list" id="faq-list"></div>
+          </div>
 
-          <article class="card">
-            <div class="section-title left-title">
-              <div class="eyebrow">MFA gesucht</div>
+          <div class="card card--padded" id="mfa">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">MFA gesucht</p>
               <h2>Vollzeitstelle als Medizinische Fachangestellte</h2>
-              <p>Die Praxis sucht ab sofort oder später Verstärkung für das Team.</p>
             </div>
-            <div class="stack-md muted-text">
-              <p>Gesucht wird eine MFA in Vollzeit. Die Praxis beschreibt sich als nettes, aufgeschlossenes Team mit Freude an der Arbeit und bietet ein persönliches Gespräch zum gegenseitigen Austausch von Erwartungen und Vorstellungen an.</p>
-              <p>Geboten werden ein übertarifliches Gehalt, ein 13. Monatsgehalt sowie ein Fahrkostenzuschuss.</p>
-              <p>Bei Interesse wenden Sie sich bitte direkt oder telefonisch an Frau Bundels oder Dr. Kuboschek unter <a href="tel:+49421253949">0421 253949</a> und senden Sie Ihre Bewerbungsunterlagen vorab an <a href="mailto:kubogerald@googlemail.com">kubogerald@googlemail.com</a>.</p>
+            <div class="rich-text" id="mfa-text"></div>
+            <div class="button-row button-row--stack-mobile">
+              <a class="button button--primary" href="tel:+49421253949">Jetzt anrufen</a>
+              <a class="button button--secondary" href="mailto:kubogerald@googlemail.com">Bewerbung per E-Mail</a>
             </div>
-          </article>
+          </div>
         </div>
       </section>
     </main>
 
-    <footer id="kontakt" class="site-footer">
+    <footer class="site-footer" id="kontakt">
       <div class="container footer-grid">
         <div>
-          <div class="eyebrow light">Kontakt &amp; Anfahrt</div>
+          <p class="eyebrow eyebrow--light">Kontakt &amp; Anfahrt</p>
           <h2>Praxis Kuboschek / Kensy</h2>
-          <div class="stack-md text-light mt-md">
-            <p><strong>Adresse:</strong> Wilhelm-Röntgen-Straße 6a, 28357 Bremen</p>
-            <p><strong>Telefon:</strong> <a href="tel:+49421253949">0421 25 39 49</a></p>
-            <p><strong>Fax:</strong> 0421 25 15 72</p>
-            <p><strong>E-Mail:</strong> <a href="mailto:kuketeam98@gmail.com">kuketeam98@gmail.com</a></p>
-            <p>Außerhalb der Praxiszeiten informiert der Anrufbeantworter über die zuständigen Rufnummern. In lebensbedrohlichen Notfällen gilt immer: <strong>112</strong>.</p>
-          </div>
+          <ul class="contact-list">
+            <li><strong>Adresse:</strong> Wilhelm-Röntgen-Straße 6a, 28357 Bremen</li>
+            <li><strong>Telefon:</strong> <a href="tel:+49421253949">0421 25 39 49</a></li>
+            <li><strong>Fax:</strong> 0421 25 15 72</li>
+            <li><strong>E-Mail:</strong> <a href="mailto:kuketeam98@gmail.com">kuketeam98@gmail.com</a></li>
+          </ul>
+          <p class="footer-note">
+            Außerhalb der Praxiszeiten informiert der Anrufbeantworter über die zuständigen Rufnummern. In lebensbedrohlichen Notfällen gilt immer: <strong>112</strong>.
+          </p>
         </div>
 
-        <div class="footer-side">
-          <article class="footer-card">
-            <div class="eyebrow light">Wir über uns</div>
-            <p>
-              Die Praxis versteht Familienmedizin im wörtlichen Sinn: Menschen über viele Jahre zu begleiten, familiäre und biografische Zusammenhänge mitzudenken und Medizin nicht nur auf einzelne Symptome zu reduzieren.
-            </p>
-          </article>
-          <article class="footer-card">
-            <div class="eyebrow light">Impressum</div>
-            <p>Herausgeber: Praxis Kuboschek / Kensy</p>
-            <p>Verantwortlich für den Inhalt: Dr. Gerald Kuboschek / Dr. Kirsten Kensy</p>
-            <p>Steuernummer: 7252703815</p>
-            <p>Aufsicht: Ärztekammer Bremen, Schwachhauser Heerstraße 30, 28209 Bremen</p>
-            <p>Zulassung zur vertragsärztlichen Versorgung durch die Kassenärztliche Vereinigung Bremen.</p>
-          </article>
+        <div>
+          <p class="eyebrow eyebrow--light">Wir über uns</p>
+          <div class="rich-text rich-text--light" id="about-text"></div>
+        </div>
+
+        <div>
+          <p class="eyebrow eyebrow--light">Impressum</p>
+          <div class="rich-text rich-text--light" id="imprint-text"></div>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <div class="container footer-bottom-inner">
-          <p>© <span id="year"></span> Familienmedizin Oberneuland</p>
-          <div class="footer-links">
-            <a href="#sprechzeiten">Praxiszeiten</a>
-            <a href="#leistungen">Leistungen</a>
-            <a href="#team">Team</a>
-            <a href="#kontakt">Kontakt</a>
-          </div>
+      <div class="container footer-bottom">
+        <p>© <span id="current-year"></span> Familienmedizin Oberneuland</p>
+        <div class="footer-links">
+          <a href="#sprechzeiten">Praxiszeiten</a>
+          <a href="#leistungen">Leistungen</a>
+          <a href="#team">Team</a>
+          <a href="#kontakt">Kontakt</a>
         </div>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <nav class="mobile-bottom-bar" aria-label="Schnellzugriffe mobil">
+      <a href="#sprechzeiten">Zeiten</a>
+      <a href="#leistungen">Leistungen</a>
+      <a href="tel:+49421253949">Anrufen</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+
+    <script src="assets/js/data.js"></script>
+    <script src="assets/js/components.js"></script>
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
