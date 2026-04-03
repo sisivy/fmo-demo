@@ -4,97 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Familienmedizin Oberneuland</title>
-    <meta
-      name="description"
-      content="Hausärztliche Gemeinschaftspraxis für Allgemeinmedizin, Innere Medizin, Naturheilkunde, Akupunktur und Chirotherapie in Bremen-Oberneuland."
-    />
+    <meta name="description" content="Hausärztliche Gemeinschaftspraxis für Allgemeinmedizin, Innere Medizin, Naturheilkunde, Akupunktur und Chirotherapie in Bremen-Oberneuland." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/styles.css" />
   </head>
   <body>
+    <div class="page-overlay" aria-hidden="true"></div>
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
-
-    <header class="site-header" id="top">
-      <div class="utility-bar">
-        <div class="container utility-bar__inner">
-          <p>Praxis Kuboschek · Kensy · Bremen-Oberneuland</p>
-          <div class="utility-bar__links">
-            <a href="tel:+49421253949">0421 25 39 49</a>
-            <a href="#kontakt">Kontakt</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="container header-main">
-        <a class="brand" href="#top" aria-label="Familienmedizin Oberneuland Startseite">
-          <span class="brand__mark">FM</span>
-          <span class="brand__text">
-            <strong>Familienmedizin Oberneuland</strong>
-            <small>Hausärztliche Gemeinschaftspraxis</small>
-          </span>
-        </a>
-
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menü öffnen">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-
-        <nav class="desktop-nav" aria-label="Hauptnavigation">
-          <a href="#start">Start</a>
-          <a href="#sprechzeiten">Praxiszeiten</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#praxis">Praxis</a>
-          <a href="#team">Team</a>
-          <a href="#impfungen">Impfungen</a>
-          <a href="#kontakt">Kontakt</a>
-          <a class="button button--primary button--small" href="tel:+49421253949">Anrufen</a>
-        </nav>
-      </div>
-
-      <nav class="mobile-nav" id="mobile-menu" aria-label="Mobile Navigation" hidden>
-        <div class="container mobile-nav__inner">
-          <a href="#start">Start</a>
-          <a href="#sprechzeiten">Praxiszeiten</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#praxis">Praxis</a>
-          <a href="#team">Team</a>
-          <a href="#impfungen">Impfungen</a>
-          <a href="#mfa">MFA gesucht</a>
-          <a href="#kontakt">Kontakt</a>
-          <a class="button button--primary" href="tel:+49421253949">Jetzt anrufen</a>
-        </div>
-      </nav>
-    </header>
+    <header class="site-header" data-site-header></header>
 
     <main id="main-content">
-      <section class="hero section" id="start">
+      <section class="hero">
         <div class="container hero__grid">
           <div class="hero__copy">
             <p class="eyebrow">Familienmedizin in Bremen-Oberneuland</p>
-            <h2>Persönliche hausärztliche Begleitung mit moderner Diagnostik und naturheilkundlicher Kompetenz.</h2>
-            <p class="lead">
-              Unsere Praxis begleitet Menschen seit vielen Jahren in unterschiedlichen Lebensphasen – mit Allgemeinmedizin,
-              Innerer Medizin, Naturheilkunde, Akupunktur und Chirotherapie in einem ganzheitlichen Ansatz.
-            </p>
+            <h1>Persönliche hausärztliche Begleitung mit moderner Diagnostik und naturheilkundlicher Kompetenz.</h1>
+            <p class="lead">Unsere Praxis begleitet Menschen seit vielen Jahren in unterschiedlichen Lebensphasen – mit Allgemeinmedizin, Innerer Medizin, Naturheilkunde, Akupunktur und Chirotherapie in einem ganzheitlichen Ansatz.</p>
             <div class="pill-row" id="hero-pills"></div>
-            <div class="button-row">
-              <a class="button button--primary" href="#kontakt">Kontakt &amp; Anfahrt</a>
-              <a class="button button--secondary" href="#sprechzeiten">Praxiszeiten ansehen</a>
+            <div class="button-row" style="margin-top: 20px;">
+              <a class="button button--primary" href="kontakt.html">Kontakt &amp; Anfahrt</a>
+              <a class="button button--secondary" href="kontakt.html#zeiten">Praxiszeiten ansehen</a>
             </div>
           </div>
-
-          <aside class="hero-panel card">
+          <aside class="hero-panel card card--padded">
             <div class="card__header">
               <p class="eyebrow">Wichtige Hinweise</p>
               <h2>Auf einen Blick</h2>
             </div>
-            <div class="stack" id="quick-facts"></div>
-            <div class="notice notice--warm">
-              <strong>Hinweis:</strong> Impf-Anfragen, Terminanfragen, Rezeptwünsche und medizinische Beratungen werden per E-Mail nicht bearbeitet.
-            </div>
+            <ul class="check-list" id="practice-overview"></ul>
+            <div class="notice notice--warm"><strong>Wichtig:</strong> Impf-Anfragen, Rezeptwünsche, Terminanfragen und medizinische Beratungen werden per E-Mail nicht bearbeitet.</div>
           </aside>
         </div>
       </section>
@@ -103,200 +43,93 @@
         <div class="container quick-access-grid" id="shortcut-cards"></div>
       </section>
 
-      <section class="section" id="sprechzeiten">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Praxiszeiten</p>
-            <h2>Öffnungszeiten, Telefonsprechstunde und Annahmeschlusszeiten klar strukturiert</h2>
-            <p>
-              Hier finden Sie die aktuellen Praxiszeiten, die Telefonsprechstunde sowie die Annahmeschlusszeiten für Akutfälle.
-            </p>
-          </div>
-
-          <div class="hours-layout">
-            <div class="card card--dark">
-              <p class="eyebrow eyebrow--light">Praxisorganisation</p>
-              <h3>Allgemeine Hinweise zum Ablauf</h3>
-              <ul class="check-list check-list--light" id="practice-overview"></ul>
-            </div>
-            <div class="grid-2" id="doctors-grid"></div>
-          </div>
-        </div>
-      </section>
-
       <section class="section section--subtle">
         <div class="container">
           <div class="section-heading">
-            <p class="eyebrow">Praxisabläufe</p>
-            <h2>Organisatorische Hinweise für einen reibungslosen Ablauf</h2>
+            <p class="eyebrow">Aktuelle Praxisabläufe</p>
+            <h2>Wichtige organisatorische Hinweise für den Praxisbesuch</h2>
+            <p>So erhalten Patientinnen und Patienten bereits vor dem Anruf einen klaren Überblick über Abläufe in der Praxis.</p>
           </div>
-          <div class="grid-4" id="flow-grid"></div>
+          <div class="grid-2" id="flow-grid"></div>
         </div>
       </section>
 
-      <section class="section section--dark" id="leistungen">
-        <div class="container">
-          <div class="section-heading section-heading--light">
-            <p class="eyebrow eyebrow--light">Leistungen Allgemeinmedizin</p>
-            <h2>Hausärztliche Versorgung, Diagnostik, Prävention und naturheilkundliche Ergänzungen</h2>
-            <p>
-              Die Praxis vereint klassische Kassenleistungen, moderne Diagnostik, Vorsorgeangebote, Impfberatung,
-              Selbstzahlerleistungen und eine naturheilkundliche Privatsprechstunde.
-            </p>
-          </div>
-          <div class="grid-4" id="services-grid"></div>
-        </div>
-      </section>
-
-      <section class="section" id="praxis">
+      <section class="section">
         <div class="container two-column-layout">
           <div class="card card--padded">
             <div class="section-heading section-heading--tight">
-              <p class="eyebrow">Die Grüne Sprechstunde</p>
-              <h2>Ganzheitliche Begleitung auf Basis fundierter Schulmedizin</h2>
+              <p class="eyebrow">Leistungen im Überblick</p>
+              <h2>Hausärztliche Medizin, Diagnostik und naturheilkundliche Ergänzungen</h2>
             </div>
-            <div class="rich-text" id="green-consultation-text"></div>
-            <div class="tag-grid" id="green-tags"></div>
-            <div class="notice notice--warm">
-              Die Grüne Sprechstunde ist eine Privatsprechstunde. Selbstzahlerleistungen werden nach GOÄ abgerechnet.
+            <div class="grid-3" id="home-services"></div>
+            <div class="button-row" style="margin-top: 24px;">
+              <a class="button button--secondary" href="leistungen.html">Alle Leistungen ansehen</a>
             </div>
           </div>
-
           <div class="stack stack--large">
             <div class="card card--padded">
               <div class="section-heading section-heading--tight">
                 <p class="eyebrow">Unsere Praxis</p>
-                <h2>27 Jahre Erfahrung, moderne Ausstattung und gelebtes Qualitätsmanagement</h2>
+                <h2>Langjährige Erfahrung und moderne Ausstattung</h2>
               </div>
-              <div class="rich-text" id="practice-text"></div>
+              <div class="rich-text" id="home-practice"></div>
+              <div class="button-row" style="margin-top: 20px;">
+                <a class="button button--secondary" href="praxis.html">Mehr zur Praxis</a>
+              </div>
             </div>
-
             <div class="card card--padded">
               <div class="section-heading section-heading--tight">
-                <p class="eyebrow">Praxisräume</p>
-                <h2>Einblicke in unsere Praxis</h2>
-                <p>Empfang, Wartebereich, Sprechzimmer und Diagnostik im Überblick.</p>
+                <p class="eyebrow">Anfahrt</p>
+                <h2>Praxis in Bremen-Oberneuland</h2>
               </div>
-              <div class="grid-2" id="rooms-grid"></div>
+              <p><a id="home-map-link" href="#" target="_blank" rel="noreferrer"></a></p>
+              <div class="button-row" style="margin-top: 20px;">
+                <a class="button button--primary" href="kontakt.html">Kontaktseite öffnen</a>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section section--subtle" id="impfungen">
-        <div class="container two-column-layout">
-          <div class="card card--padded">
-            <div class="section-heading section-heading--tight">
-              <p class="eyebrow">Impfungen</p>
-              <h2>Impfangebote und Reiseimpfberatung in der Praxis</h2>
-            </div>
-            <div class="rich-text" id="vaccination-intro"></div>
-            <ul class="check-list" id="vaccinations-list"></ul>
-          </div>
-          <div class="card card--padded">
-            <div class="section-heading section-heading--tight">
-              <p class="eyebrow">Weitere Hinweise</p>
-              <h2>Wichtig für die Impfberatung</h2>
-            </div>
-            <div class="rich-text" id="vaccination-notes"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="team">
-        <div class="container">
-          <div class="section-heading">
-            <p class="eyebrow">Team</p>
-            <h2>Ein erfahrenes Team mit Fachkompetenz, Freundlichkeit und Freude an der Arbeit</h2>
-            <p>
-              Die gute Atmosphäre in der Praxis beruht auf einem eingespielten Team aus ärztlicher Leitung,
-              Medizinischen Fachangestellten und Ausbildung.
-            </p>
-          </div>
-
-          <div class="grid-2" id="doctor-team-grid"></div>
-          <div class="card card--padded team-section-card">
-            <div class="section-heading section-heading--tight">
-              <p class="eyebrow">Praxis-Team</p>
-              <h2>Unser Praxisteam</h2>
-            </div>
-            <div class="grid-3" id="team-grid"></div>
           </div>
         </div>
       </section>
 
       <section class="section section--subtle">
-        <div class="container two-column-layout">
-          <div class="card card--padded">
-            <div class="section-heading section-heading--tight">
-              <p class="eyebrow">Häufige Fragen</p>
-              <h2>Häufige Fragen im Überblick</h2>
-            </div>
-            <div class="faq-list" id="faq-list"></div>
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Team &amp; Stellenangebot</p>
+            <h2>Ein erfahrenes Team und Verstärkung für die Praxis</h2>
           </div>
-
-          <div class="card card--padded" id="mfa">
+          <div class="grid-2" id="home-team"></div>
+          <div class="card card--padded" style="margin-top: 24px;">
             <div class="section-heading section-heading--tight">
               <p class="eyebrow">MFA gesucht</p>
               <h2>Vollzeitstelle als Medizinische Fachangestellte</h2>
             </div>
             <div class="rich-text" id="mfa-text"></div>
-            <div class="button-row button-row--stack-mobile">
-              <a class="button button--primary" href="tel:+49421253949">Jetzt anrufen</a>
-              <a class="button button--secondary" href="mailto:kubogerald@googlemail.com">Bewerbung per E-Mail</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container two-column-layout">
+          <div class="card card--padded">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">Häufige Fragen</p>
+              <h2>Schnelle Antworten auf wichtige organisatorische Fragen</h2>
             </div>
+            <div class="stack" id="home-faq"></div>
+          </div>
+          <div class="card card--padded">
+            <div class="section-heading section-heading--tight">
+              <p class="eyebrow">Weiterführende Seiten</p>
+              <h2>Direkt zu den wichtigsten Bereichen</h2>
+            </div>
+            <div class="page-nav-cards" id="home-page-nav"></div>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer" id="kontakt">
-      <div class="container footer-grid">
-        <div>
-          <p class="eyebrow eyebrow--light">Kontakt &amp; Anfahrt</p>
-          <h2>Praxis Kuboschek / Kensy</h2>
-          <ul class="contact-list">
-            <li><strong>Adresse:</strong> <a href="https://maps.google.com/?q=Wilhelm-R%C3%B6ntgen-Stra%C3%9Fe+6a,+28357+Bremen" target="_blank" rel="noreferrer">Wilhelm-Röntgen-Straße 6a, 28357 Bremen</a></li>
-            <li><strong>Telefon:</strong> <a href="tel:+49421253949">0421 25 39 49</a></li>
-            <li><strong>Fax:</strong> 0421 25 15 72</li>
-            <li><strong>E-Mail:</strong> <a href="mailto:kuketeam98@gmail.com">kuketeam98@gmail.com</a></li>
-          </ul>
-          <p class="footer-note">
-            Außerhalb der Praxiszeiten informiert der Anrufbeantworter über die zuständigen Rufnummern. In lebensbedrohlichen Notfällen gilt immer: <strong>112</strong>.
-          </p>
-        </div>
-
-        <div>
-          <p class="eyebrow eyebrow--light">Wir über uns</p>
-          <div class="rich-text rich-text--light" id="about-text"></div>
-        </div>
-
-        <div>
-          <p class="eyebrow eyebrow--light">Impressum</p>
-          <div class="rich-text rich-text--light" id="imprint-text"></div>
-        </div>
-      </div>
-
-      <div class="container footer-bottom">
-        <p>© <span id="current-year"></span> Familienmedizin Oberneuland</p>
-        <div class="footer-links">
-          <a href="#sprechzeiten">Praxiszeiten</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#team">Team</a>
-          <a href="#kontakt">Kontakt</a>
-        </div>
-      </div>
-    </footer>
-
-    <nav class="mobile-bottom-bar" aria-label="Schnellzugriffe mobil">
-      <a href="#sprechzeiten">Zeiten</a>
-      <a href="#leistungen">Leistungen</a>
-      <a href="tel:+49421253949">Anrufen</a>
-      <a href="#kontakt">Kontakt</a>
-    </nav>
-
-    <script src="assets/js/data.js"></script>
-    <script src="assets/js/components.js"></script>
-    <script src="assets/js/app.js"></script>
+    <footer class="footer" data-site-footer></footer>
+    <div class="mobile-quickbar" data-mobile-quickbar></div>
+    <script type="module" src="assets/js/home.js"></script>
   </body>
 </html>

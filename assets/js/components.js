@@ -1,118 +1,172 @@
-window.components = {
-  pill(text) {
-    return `<span class="pill">${text}</span>`;
-  },
+export function escapeHtml(value) {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
 
-  quickFact(item) {
-    return `
-      <article class="fact-card">
-        <h3>${item.title}</h3>
-        <p>${item.text}</p>
-      </article>
-    `;
-  },
+export function paragraphGroup(items = []) {
+  return items.map((item) => `<p>${escapeHtml(item)}</p>`).join('');
+}
 
-  shortcut(item) {
-    return `
-      <a class="shortcut-card" href="${item.href}">
-        <h3>${item.title}</h3>
-        <p>${item.text}</p>
-        <span>Direkt öffnen</span>
-      </a>
-    `;
-  },
+export function listItems(items = [], className = 'check-list') {
+  return `<ul class="${className}">${items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')}</ul>`;
+}
 
-  doctorCard(doctor) {
-    return `
-      <article class="card card--padded doctor-card">
-        <p class="eyebrow">Ärztliche Sprechzeit</p>
-        <h3>${doctor.name}</h3>
-        <p class="muted">${doctor.role}</p>
-        <p class="doctor-card__meta">${doctor.experience}</p>
-        <ul class="check-list">
-          ${doctor.hours.map((item) => `<li>${item}</li>`).join("")}
-        </ul>
-        <div class="tag-row">
-          ${doctor.tags.map((tag) => `<span class="tag">${tag}</span>`).join("")}
-        </div>
-      </article>
-    `;
-  },
+export function pillRow(items = []) {
+  return items.map((item) => `<span class="pill">${escapeHtml(item)}</span>`).join('');
+}
 
-  infoCard(item) {
-    return `
-      <article class="card card--padded info-card">
-        <h3>${item.title}</h3>
-        <p>${item.text}</p>
-      </article>
-    `;
-  },
+export function featureCards(items = []) {
+  return items
+    .map(
+      (item) => `
+        <a class="feature-card" href="${escapeHtml(item.href)}">
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+          <span class="inline-link">Mehr erfahren →</span>
+        </a>
+      `
+    )
+    .join('');
+}
 
-  serviceCard(group) {
-    return `
-      <article class="service-card">
-        <h3>${group.title}</h3>
-        <ul class="check-list check-list--light">
-          ${group.items.map((item) => `<li>${item}</li>`).join("")}
-        </ul>
-      </article>
-    `;
-  },
+export function flowCards(items = []) {
+  return items
+    .map(
+      (item) => `
+        <article class="info-card">
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+        </article>
+      `
+    )
+    .join('');
+}
 
-  photoPlaceholder(label, compact = false) {
-    return `
-      <div class="photo-placeholder ${compact ? "photo-placeholder--compact" : ""}">
-        <div class="photo-placeholder__frame">
-          <span>Foto</span>
-          <small>${label}</small>
-        </div>
-      </div>
-    `;
-  },
-
-  doctorTeamCard(item) {
-    return `
-      <article class="card card--padded team-lead-card">
-        <div class="team-lead-layout">
-          ${window.components.photoPlaceholder(`Teamfoto ${item.name}`, true)}
-          <div>
-            <p class="eyebrow">Ärztliche Leitung</p>
-            <h3>${item.name}</h3>
-            <p class="muted">${item.role}</p>
-            <p class="doctor-card__meta">${item.meta}</p>
+export function doctorCards(items = []) {
+  return items
+    .map(
+      (doctor) => `
+        <article class="doctor-card">
+          <h3>${escapeHtml(doctor.name)}</h3>
+          <p>${escapeHtml(doctor.role)}</p>
+          <p class="meta">${escapeHtml(doctor.meta)}</p>
+          ${listItems(doctor.hours)}
+          <div class="tag-grid">
+            ${doctor.specialties.map((entry) => `<span class="tag">${escapeHtml(entry)}</span>`).join('')}
           </div>
-        </div>
-      </article>
-    `;
-  },
+        </article>
+      `
+    )
+    .join('');
+}
 
-  teamMemberCard(item) {
-    return `
-      <article class="team-member-card">
-        ${window.components.photoPlaceholder(`Foto ${item.name}`, true)}
-        <div>
-          <h3>${item.name}</h3>
-          <p>${item.role}</p>
-          <small>${item.since}</small>
-        </div>
-      </article>
-    `;
-  },
+export function serviceCards(items = []) {
+  return items
+    .map(
+      (service) => `
+        <article class="info-card">
+          <h3>${escapeHtml(service.title)}</h3>
+          ${listItems(service.items)}
+        </article>
+      `
+    )
+    .join('');
+}
 
-  faq(item, index) {
-    return `
-      <details class="faq-item" ${index === 0 ? "open" : ""}>
-        <summary>${item.question}</summary>
-        <p>${item.answer}</p>
-      </details>
-    `;
-  },
+export function tagGroup(items = []) {
+  return items.map((item) => `<span class="tag">${escapeHtml(item)}</span>`).join('');
+}
 
-  paragraph(text) {
-    return `<p>${text}</p>`;
-  },
+export function photoCards(items = [], prefix = 'Foto') {
+  return items
+    .map(
+      (item) => `
+        <article class="photo-card">
+          <div class="photo-placeholder">
+            <div>
+              <strong>${escapeHtml(prefix)}</strong>
+              <span>${escapeHtml(item)}</span>
+            </div>
+          </div>
+          <h3>${escapeHtml(item)}</h3>
+        </article>
+      `
+    )
+    .join('');
+}
 
-  list(items, light = false) {
-    return `<ul class="check-list ${light ? "check-list--light" : ""}">${items.map((item) => `<li>${item}</li>`).join("")}</ul>`;
-  }
-};
+export function doctorTeamCards(items = []) {
+  return items
+    .map(
+      (doctor) => `
+        <article class="doctor-card doctor-team-card">
+          <div class="photo-placeholder">
+            <div>
+              <strong>Foto</strong>
+              <span>${escapeHtml(doctor.name)}</span>
+            </div>
+          </div>
+          <div>
+            <h3>${escapeHtml(doctor.name)}</h3>
+            <p>${escapeHtml(doctor.role)}</p>
+            <p class="meta">${escapeHtml(doctor.meta)}</p>
+          </div>
+        </article>
+      `
+    )
+    .join('');
+}
+
+export function memberCards(items = []) {
+  return items
+    .map(
+      (member) => `
+        <article class="member-card">
+          <div class="photo-placeholder">
+            <div>
+              <strong>Foto</strong>
+              <span>${escapeHtml(member.name)}</span>
+            </div>
+          </div>
+          <div>
+            <h3>${escapeHtml(member.name)}</h3>
+            <p>${escapeHtml(member.role)}</p>
+            <p class="meta">${escapeHtml(member.since)}</p>
+          </div>
+        </article>
+      `
+    )
+    .join('');
+}
+
+export function faqCards(items = []) {
+  return items
+    .map(
+      (item) => `
+        <details class="info-card">
+          <summary><strong>${escapeHtml(item.question)}</strong></summary>
+          <div class="rich-text" style="margin-top: 12px;">
+            <p>${escapeHtml(item.answer)}</p>
+          </div>
+        </details>
+      `
+    )
+    .join('');
+}
+
+export function pageNavCards(items = []) {
+  return items
+    .map(
+      (item) => `
+        <a class="page-nav-card" href="${escapeHtml(item.href)}">
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.text)}</p>
+        </a>
+      `
+    )
+    .join('');
+}
