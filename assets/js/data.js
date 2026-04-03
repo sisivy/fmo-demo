@@ -22,7 +22,7 @@ window.siteData = {
     { title: "Praxiszeiten", text: "Öffnungszeiten, ärztliche Sprechzeiten und Annahmeschluss sofort sichtbar.", href: "#sprechzeiten" },
     { title: "Leistungen", text: "Vorsorge, Diagnostik, Impfungen, DMP und Naturheilkunde strukturiert dargestellt.", href: "#leistungen" },
     { title: "MFA gesucht", text: "Stellenanzeige inklusive Kontaktmöglichkeit direkt auf der Startseite.", href: "#mfa" },
-    { title: "Kontakt", text: "Telefon, Adresse, E-Mail und wichtige Hinweise ohne langes Scrollen erreichbar.", href: "#kontakt" }
+    { title: "Kontakt", text: "Telefon, Adresse, E-Mail und Anfahrt auf einen Blick.", href: "#kontakt" }
   ],
   practiceOverview: [
     "Praxis für Allgemeinmedizin: Montag bis Freitag 08:00–12:00 Uhr.",

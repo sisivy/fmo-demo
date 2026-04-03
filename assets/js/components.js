@@ -63,7 +63,7 @@ window.components = {
     return `
       <div class="photo-placeholder ${compact ? "photo-placeholder--compact" : ""}">
         <div class="photo-placeholder__frame">
-          <span>Foto-Platzhalter</span>
+          <span>Foto</span>
           <small>${label}</small>
         </div>
       </div>
